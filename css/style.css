@@ -1,0 +1,31 @@
+/* Glitch Animation */
+.glitch {
+    font-size: 4em;
+    position: relative;
+    color: #fff;
+    text-shadow: 2px 2px #ff0000;
+    animation: glitch 3s infinite;
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+/* Briefcase Interaction */
+.briefcase {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s;
+}
+
+.briefcase:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
