@@ -1,25 +1,38 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decoding the Chaos: Pulp Fiction</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Glitch Effect Background -->
-    <div class="glitch-container">
-        <div class="glitch" data-text="Welcome to the Hyperreal"></div>
-    </div>
+    <!-- Updated Hero Section with Background Image -->
+    <div class="hero">
+        <div class="glitch-container">
+            <div class="glitch" data-text="Welcome to the Hyperreal"></div>
+        </div>
 
-    <!-- Clickable Briefcase -->
-    <div class="briefcase" onclick="redirectRandomly()">
-        <img src="assets/briefcase.png" alt="Mysterious Briefcase">
-    </div>
+        <!-- Modern Button Container -->
+        <div class="button-container">
+            <!-- Modern Navigation Buttons -->
+            <button class="modern-btn chaos-btn" onclick="toggleMode('chaos')">
+                <i class="fas fa-random"></i> Chaos Mode
+            </button>
+            
+            <button class="modern-btn order-btn" onclick="toggleMode('order')">
+                <i class="fas fa-bars"></i> Order Mode
+            </button>
+        </div>
 
-    <!-- Navigation Toggle -->
-    <div class="nav-mode">
-        <button onclick="toggleMode('chaos')">Chaos Mode</button>
-        <button onclick="toggleMode('order')">Order Mode</button>
+        <!-- Updated Briefcase with Hover Effect -->
+        <div class="briefcase" onclick="redirectRandomly()">
+            <img src="assets/briefcase.gif" alt="Mysterious Briefcase">
+            <div class="hover-effect"></div>
+        </div>
     </div>
 
     <script src="js/script.js"></script>
