@@ -58,9 +58,26 @@
 
 /* Image Fixes */
 .briefcase img {
-    width: 200px;
-    height: auto;
+    max-width: 100%;  /* Scales with container */
+    height: auto;     /* Maintains aspect ratio */
+    min-width: 200px; /* Minimum size */
+    width: 30vw;      /* Responsive viewport-based sizing */
     filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+    .briefcase img {
+        width: 50vw;  /* Larger on mobile */
+    }
+}
+
+/* Applies to all content pages */
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
 }
 
 .hover-effect {
@@ -101,4 +118,24 @@
         width: 80%;
         justify-content: center;
     }
+}
+
+/* Grid layout for content pages */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s;
 }
