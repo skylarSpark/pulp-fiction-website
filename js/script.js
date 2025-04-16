@@ -1,9 +1,20 @@
 // Random Redirect (Chaos Mode)
 function redirectRandomly() {
-    const pages = ["analysis.html", "context.html", "remix-hub.html"];
-    const randomPage = pages[Math.floor(Math.random() * pages.length)];
+    const chaosDestinations = [
+        "analysis.html#scene-1",
+        "analysis.html#scene-2",
+        "analysis.html#scene-3",
+        "analysis.html#scene-4",
+        "analysis.html#scene-5",
+        "analysis.html#scene-6",
+        "analysis.html#scene-7",
+        "context.html",
+        "remix-hub.html"
+    ];
+    const randomPage = chaosDestinations[Math.floor(Math.random() * chaosDestinations.length)];
     window.location.href = randomPage;
 }
+
 
 // Navigation Mode Toggle
 function toggleMode(mode) {
