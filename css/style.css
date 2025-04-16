@@ -1,30 +1,33 @@
 /* css/style.css */
 /* Modern Button Styles */
-.modern-btn {
-    padding: 15px 30px;
-    border: none;
-    border-radius: 25px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
+/* ===== CENTER & SIZE ADJUSTMENTS ===== */
+.briefcase {
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
-    position: relative;
-    overflow: hidden;
+    z-index: 1; /* Ensure it's below buttons (z-index: 1000) */
 }
 
-.chaos-btn {
-    background: linear-gradient(45deg, #ff6b6b, #ff0000);
-    color: white;
-    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+.briefcase img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    min-width: unset; /* Remove previous constraint */
+    object-fit: contain; /* Maintain aspect ratio while filling space */
+    animation: pulse 2s infinite;
 }
 
-.order-btn {
-    background: linear-gradient(45deg, #4ecdc4, #00a8ff);
-    color: white;
-    box-shadow: 0 4px 15px rgba(78, 205, 196, 0.4);
+@keyframes pulse {
+    0% { transform: scale(0.98); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(0.98); }
 }
 
 /* Hover Effects */
@@ -138,4 +141,52 @@
 .card:hover {
     transform: translateY(-5px);
     transition: transform 0.3s;
+}
+
+/* Add to existing styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 2; /* Ensure content appears above background elements */
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    border-radius: 20px;
+}
+
+/* Dark Theme Base */
+body {
+    background-color: #121212;
+    color: #ffffff;
+
+    font-family: 'Libre Baskerville', serif;
+    line-height: 1.6;
+}
+
+/* Glitch Text Color */
+.glitch {
+    color: #ffffff;
+}
+
+/* Card Backgrounds */
+.card {
+    background: #2d2d2d;
+    color: #ffffff;
+}
+
+/* Form Styling */
+.remix-form {
+    background: #1a1a1a;
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+}
+
+input, textarea {
+    background: #2d2d2d;
+    color: #ffffff;
+    border: 1px solid #4ecdc4;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
 }

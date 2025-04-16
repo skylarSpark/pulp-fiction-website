@@ -1,0 +1,49 @@
+.analysis-section {
+    background: #2d2d2d;
+    padding: 25px;
+    border-radius: 15px;
+    margin: 25px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.quote {
+    font-style: italic;
+    border-left: 3px solid #4ecdc4;
+    padding-left: 15px;
+    margin: 15px 0;
+    color: #cccccc;
+}
+
+.responsive-img {
+    border: 2px solid #4ecdc4;
+    margin: 20px 0;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+
+    padding: 20px;
+
+    font-family: 'Libre Baskerville', serif;
+    font-size: 18px; /* optional, good size for readability */
+    line-height: 1.6; /* adds comfortable line spacing */
+}
+
+/* Responsive Spacing */
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Smaller space on mobile */
+    }
+    
+    .container {
+        padding: 20px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .analysis-section {
+        padding: 20px;
+        margin: 20px 0;
+    }
+}

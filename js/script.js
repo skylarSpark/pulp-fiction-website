@@ -16,3 +16,15 @@ function toggleMode(mode) {
         document.body.classList.remove('chaos');
     }
 }
+
+// Handle form submissions
+document.getElementById('submissionForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Basic client-side handling
+    const formData = new FormData(this);
+    
+    // For demo purposes - replace with actual backend
+    alert('Submission received! (Demo mode)');
+    this.reset();
+});
